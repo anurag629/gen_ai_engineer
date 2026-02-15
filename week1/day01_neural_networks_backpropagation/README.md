@@ -1294,3 +1294,137 @@ You'll take this foundation and build a **character-level language model** - the
 > Every deep learning framework (PyTorch, TensorFlow, JAX) does exactly what your
 > `Value` class does - just on tensors (arrays of numbers) instead of single scalars,
 > and with GPU acceleration. The core idea is identical.
+
+---
+
+## Interview Prep: Key Terms & Concepts for Day 1
+
+> Revise this section before any ML/AI interview. These are the terms you MUST
+> be able to explain clearly, with examples.
+
+---
+
+### Core Concepts
+
+| Term | Definition | Interview-Ready Answer |
+|------|-----------|----------------------|
+| **Neural Network** | A computational model inspired by the brain, made of layers of interconnected neurons that learn patterns from data. | "A neural network is a function approximator made of layers of neurons. Each neuron computes a weighted sum of inputs, adds a bias, and passes it through a non-linear activation function. The network learns by adjusting weights to minimize a loss function." |
+| **Backpropagation** | Algorithm to compute gradients of the loss with respect to every weight in the network, by applying the chain rule backwards through the computation graph. | "Backpropagation is the algorithm that makes training neural networks efficient. It computes how much each weight contributed to the error by walking the computation graph in reverse, applying the chain rule at each step. It's essentially reverse-mode automatic differentiation." |
+| **Gradient** | A vector of partial derivatives. For a single weight, it tells you how much the loss would change if you slightly changed that weight. | "The gradient of a weight tells us the direction and rate of steepest increase of the loss function. We move in the opposite direction (gradient descent) to reduce the loss." |
+| **Gradient Descent** | Optimization algorithm that updates weights by subtracting a fraction (learning rate) of the gradient, moving toward the minimum of the loss function. | "Gradient descent is the core optimization algorithm. We compute the gradient of the loss w.r.t. each weight and update: `w = w - lr * gradient`. It iteratively moves weights toward values that minimize the loss." |
+| **Learning Rate** | A hyperparameter that controls the step size during gradient descent. | "The learning rate controls how much we adjust weights per step. Too high = we overshoot the minimum and diverge. Too low = training is extremely slow. Typical values are 1e-4 to 0.1. It's often the most important hyperparameter to tune." |
+
+### Mathematical Foundations
+
+| Term | Definition | Interview-Ready Answer |
+|------|-----------|----------------------|
+| **Derivative** | Measures the rate of change of a function's output with respect to its input. | "A derivative tells us the sensitivity of the output to a small change in input. In neural networks, we compute derivatives of the loss w.r.t. weights to know how to update them." |
+| **Partial Derivative** | Derivative of a function with respect to one variable, treating all other variables as constants. | "In a neural network with millions of parameters, we need the partial derivative of the loss w.r.t. each individual weight. This tells us how much each specific weight affects the final loss." |
+| **Chain Rule** | If y = f(g(x)), then dy/dx = f'(g(x)) * g'(x). Allows computing derivatives of composite functions by multiplying local derivatives. | "The chain rule is the mathematical backbone of backpropagation. It says: to get the gradient of the loss w.r.t. a weight deep in the network, multiply together all the local gradients along the path from loss back to that weight." |
+| **Computational Graph** | A directed acyclic graph (DAG) that represents a mathematical expression. Nodes are values/operations, edges show data flow. | "A computational graph breaks down complex expressions into simple operations. The forward pass flows left-to-right computing values. The backward pass flows right-to-left computing gradients. PyTorch builds these dynamically, TensorFlow (v1) built them statically." |
+| **Topological Sort** | Ordering of nodes in a DAG such that every node comes after all nodes it depends on. | "We need topological ordering for backpropagation to ensure we compute a node's gradient only after we've computed the gradients of all nodes that use it. It's a fundamental graph algorithm." |
+
+### Network Components
+
+| Term | Definition | Interview-Ready Answer |
+|------|-----------|----------------------|
+| **Neuron (Perceptron)** | The basic unit of a neural network. Computes: output = activation(w*x + b). | "A neuron takes inputs, multiplies each by a learned weight, sums them, adds a bias, and passes through an activation function. It's a simple linear transform followed by a non-linearity." |
+| **Weight** | Learnable parameter that scales an input to a neuron. Determines how much influence an input has. | "Weights are the learnable parameters of the network. During training, backpropagation computes how each weight should change to reduce the loss, and gradient descent actually updates them." |
+| **Bias** | Learnable parameter added to the weighted sum. Allows the neuron to shift its activation function. | "The bias allows a neuron to activate even when all inputs are zero. It shifts the activation function left or right. Without bias, the decision boundary must pass through the origin." |
+| **Layer** | A collection of neurons that process the same input in parallel. | "A layer is a group of neurons that each receive the same inputs but have different weights, so they learn different features. Stacking layers creates hierarchical feature extraction." |
+| **MLP (Multi-Layer Perceptron)** | A neural network with one or more hidden layers between input and output. The simplest deep network architecture. | "An MLP is a fully-connected feedforward network. Data flows in one direction through input -> hidden layers -> output. Each layer is fully connected to the next. It's the simplest deep learning architecture and a universal function approximator." |
+| **Hidden Layer** | Any layer between the input and output layers. "Hidden" because its values aren't directly observed. | "Hidden layers extract increasingly abstract features from the input. The first hidden layer might detect simple patterns, the second layer combines those into more complex features, and so on." |
+
+### Activation Functions
+
+| Term | Definition | When to Use | Derivative |
+|------|-----------|-------------|-----------|
+| **ReLU** (Rectified Linear Unit) | f(x) = max(0, x). Outputs x if positive, 0 if negative. | Default for hidden layers in most modern networks. | 1 if x > 0, else 0 |
+| **Sigmoid** | f(x) = 1/(1+e^(-x)). Squashes output to (0, 1). | Output layer for binary classification (probability). | sigmoid(x) * (1 - sigmoid(x)) |
+| **Tanh** | f(x) = (e^x - e^(-x))/(e^x + e^(-x)). Squashes output to (-1, 1). | RNNs, LSTMs, or when zero-centered output is needed. | 1 - tanh(x)^2 |
+| **Softmax** | Converts a vector of numbers into a probability distribution that sums to 1. | Output layer for multi-class classification. | Complex (involves Jacobian) |
+| **GELU** | Gaussian Error Linear Unit. Smooth version of ReLU used in Transformers. | Transformer models (GPT, BERT). | Complex (involves Gaussian CDF) |
+
+**Common interview question:** *"Why do we need activation functions?"*
+> "Without non-linear activation functions, a deep network collapses into a single linear transformation (a matrix multiplication), no matter how many layers you stack. Non-linearity allows the network to learn complex, non-linear decision boundaries. This is why a single neuron can't solve XOR but an MLP with non-linear activations can."
+
+### Training Concepts
+
+| Term | Definition | Interview-Ready Answer |
+|------|-----------|----------------------|
+| **Loss Function** | A function that quantifies how wrong the model's predictions are. Training minimizes this. | "The loss function provides the signal that drives learning. Common losses: MSE for regression, Cross-Entropy for classification. The choice of loss function affects what the model optimizes for." |
+| **MSE (Mean Squared Error)** | Average of (prediction - target)^2. Common loss for regression. | "MSE penalizes large errors more than small ones (due to squaring). It's differentiable everywhere, which makes it good for gradient-based optimization. For regression tasks." |
+| **Cross-Entropy Loss** | -sum(target * log(prediction)). Standard loss for classification. | "Cross-entropy measures the difference between two probability distributions. It penalizes confident wrong predictions heavily. Standard for classification tasks." |
+| **Epoch** | One complete pass through the entire training dataset. | "An epoch means the model has seen every training example once. Training typically runs for many epochs. Too few = underfitting. Too many = overfitting." |
+| **Batch Size** | Number of training examples used in one gradient update. | "Batch size is a tradeoff: larger batches give more stable gradient estimates but use more memory and can generalize worse. Common sizes: 32, 64, 128, 256." |
+| **Forward Pass** | Computing the output of the network given an input by propagating data through all layers. | "The forward pass is the prediction step. Data flows through each layer sequentially, applying weights, biases, and activations, until we get the final output." |
+| **Backward Pass** | Computing gradients of the loss w.r.t. all weights by propagating gradients backward through the network. | "The backward pass computes gradients using backpropagation. Starting from the loss, we propagate gradients backward through each operation using the chain rule." |
+| **Zero Gradients** | Resetting all gradients to 0 before each backward pass. | "Gradients accumulate by default (using +=). If we don't zero them before each backward pass, the new gradients add to the old ones, corrupting the update. In PyTorch: `optimizer.zero_grad()`." |
+
+### Autograd & Frameworks
+
+| Term | Definition | Interview-Ready Answer |
+|------|-----------|----------------------|
+| **Autograd** | Automatic differentiation - a system that automatically computes gradients by tracking operations on tensors. | "Autograd tracks every operation on tensors and builds a computation graph. When you call `.backward()`, it walks this graph in reverse to compute all gradients. PyTorch uses dynamic autograd (define-by-run), meaning the graph is built on-the-fly." |
+| **Dynamic Computation Graph** | The graph is built on-the-fly during the forward pass. Used by PyTorch. | "PyTorch builds the computation graph dynamically as operations are executed. This means you can use Python control flow (if/else, loops) naturally. The graph can change every iteration." |
+| **Static Computation Graph** | The graph is defined upfront before execution. Used by TensorFlow v1. | "TensorFlow v1 required defining the full graph before running it. This allowed more optimization but made debugging harder. TF2 moved to eager (dynamic) mode by default." |
+| **Tensor** | Multi-dimensional array (generalization of vectors and matrices). The fundamental data structure in deep learning. | "A tensor is an n-dimensional array. Scalar = 0D tensor, vector = 1D, matrix = 2D, and so on. All neural network operations are tensor operations. Our micrograd used scalars; real frameworks use tensors for GPU parallelism." |
+
+### Common Pitfalls (Great Interview Discussion Points)
+
+| Problem | What Happens | Solution |
+|---------|-------------|----------|
+| **Vanishing Gradient** | Gradients become extremely small in early layers, so those layers stop learning. | Use ReLU (gradient is 1 for positive values), residual connections, batch normalization, or LSTM/GRU for sequences. |
+| **Exploding Gradient** | Gradients become extremely large, causing weight updates to blow up (NaN loss). | Gradient clipping, lower learning rate, batch normalization, proper weight initialization. |
+| **Dead ReLU** | A ReLU neuron always outputs 0 (for all inputs), so it never gets gradient signal and never recovers. | Use Leaky ReLU, ELU, or GELU. Lower learning rate. Proper initialization. |
+| **Overfitting** | Model memorizes training data but fails on new data. Training loss is low, validation loss is high. | More data, dropout, regularization (L1/L2), early stopping, data augmentation. |
+| **Underfitting** | Model is too simple to capture patterns. Both training and validation loss are high. | Bigger model, more layers/neurons, train longer, reduce regularization. |
+
+### Rapid-Fire Interview Questions
+
+**Q: What's the difference between a parameter and a hyperparameter?**
+> Parameter: learned by the model (weights, biases). Hyperparameter: set by the engineer (learning rate, batch size, number of layers).
+
+**Q: Why do we initialize weights randomly instead of all zeros?**
+> If all weights are zero (or the same value), all neurons in a layer compute the same output and get the same gradient. They'd all learn the same thing forever - this is called the "symmetry breaking" problem. Random initialization gives each neuron a different starting point.
+
+**Q: What is a universal function approximator?**
+> A neural network with at least one hidden layer and non-linear activation can approximate any continuous function to arbitrary accuracy (given enough neurons). This is the Universal Approximation Theorem. It guarantees expressive power but says nothing about learnability.
+
+**Q: Explain the bias-variance tradeoff.**
+> Bias = error from overly simple models (underfitting). Variance = error from overly complex models that are sensitive to training data (overfitting). We want the sweet spot: complex enough to capture patterns, simple enough to generalize.
+
+**Q: What is regularization?**
+> Techniques to prevent overfitting. L1 regularization (adds |w| to loss) encourages sparsity. L2 regularization (adds w^2 to loss) encourages small weights. Dropout randomly disables neurons during training, forcing redundancy.
+
+**Q: Stochastic Gradient Descent (SGD) vs Batch Gradient Descent?**
+> Batch GD: compute gradient on entire dataset (slow but stable). SGD: compute gradient on one example (fast but noisy). Mini-batch GD: compute on a small batch (best of both worlds, most common in practice).
+
+**Q: Name popular optimizers beyond basic SGD.**
+> SGD with Momentum (accelerates in consistent directions), Adam (adaptive learning rates per parameter, most popular), AdamW (Adam with proper weight decay), RMSprop (adaptive per-parameter). Adam is the default starting choice for most tasks.
+
+---
+
+### Flashcard Summary (Quick Revision)
+
+```
+Derivative         = How much output changes when you wiggle the input
+Gradient           = Vector of all partial derivatives
+Chain Rule         = Multiply local gradients along the path
+Backpropagation    = Chain rule applied backwards through the computation graph
+Forward Pass       = Input -> compute through layers -> prediction
+Backward Pass      = Loss -> compute gradients backwards -> all weight gradients
+Gradient Descent   = w_new = w_old - learning_rate * gradient
+Learning Rate      = Step size for weight updates (too big = diverge, too small = slow)
+Loss Function      = Single number measuring "how wrong" (MSE, Cross-Entropy)
+Epoch              = One full pass through the training data
+Neuron             = weighted_sum(inputs) + bias -> activation_function -> output
+Activation         = Non-linear function (ReLU, sigmoid, tanh) enabling complex learning
+MLP                = Stack of fully-connected layers
+Autograd           = System that automatically computes gradients by tracking operations
+Vanishing Gradient = Gradients shrink to ~0 in deep networks (solution: ReLU, residual connections)
+Exploding Gradient = Gradients grow to infinity (solution: gradient clipping, batch norm)
+Overfitting        = Memorizing training data (solution: more data, dropout, regularization)
+Underfitting       = Model too simple for the data (solution: bigger model, train longer)
+Regularization     = Penalizing complexity to prevent overfitting (L1, L2, dropout)
+```
