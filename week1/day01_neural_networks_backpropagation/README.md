@@ -46,6 +46,10 @@ Here's what a neural network does in 4 steps:
 
 That's it. Everything else is details. Let's learn those details.
 
+> **Run `python visualizations.py` to generate all the diagrams referenced in this book.**
+
+![Forward and Backward Pass](viz_forward_backward.png)
+
 ---
 
 ## Chapter 1: Derivatives - The Only Math You Need
@@ -154,6 +158,8 @@ As a graph:
 ### Why Graphs?
 
 Because backpropagation literally walks this graph **backwards** to compute derivatives. The graph remembers *how* a value was computed, so we know how to compute its gradient.
+
+![Computational Graph](viz_computational_graph.png)
 
 ### Let's Code It: A Simple Trace
 
@@ -563,6 +569,8 @@ For hidden layers in 2024+: use ReLU (or variants like GELU, SiLU)
 For output layers: depends on your task
 ```
 
+![Activation Functions Comparison](viz_activation_functions.png)
+
 ### Also Needed: Power and Negation
 
 ```python
@@ -613,6 +621,8 @@ Visually:
   x2 ──[w2]──┼──[sum + b]──[activation]──> output
   x3 ──[w3]──┘
 ```
+
+![Anatomy of a Neuron](viz_neuron.png)
 
 ### Code: A Single Neuron
 
@@ -678,6 +688,8 @@ class MLP:
         return [p for layer in self.layers for p in layer.parameters()]
 ```
 
+![MLP Architecture](viz_mlp_architecture.png)
+
 ### Let's Test It
 
 ```python
@@ -731,6 +743,10 @@ The **learning rate** controls how big each step is:
 - Too small: training takes forever
 - Just right: smooth convergence (typically 0.001 to 0.1)
 
+![Effect of Learning Rates](viz_learning_rates.png)
+
+![Gradient Descent on Loss Surface](viz_gradient_descent.png)
+
 ```python
 def train_step(model, xs, ys, learning_rate=0.05):
     """One step of training."""
@@ -756,6 +772,8 @@ def train_step(model, xs, ys, learning_rate=0.05):
 ```
 
 **Why zero gradients?** Because we used `+=` when accumulating gradients. If we don't reset them, gradients from the previous step will add to the new ones, making everything wrong.
+
+![3D Loss Landscape](viz_loss_landscape_3d.png)
 
 ---
 
