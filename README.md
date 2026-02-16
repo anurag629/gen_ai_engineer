@@ -677,28 +677,27 @@ pip install transformers datasets langchain chromadb sentence-transformers
 
 ```
 gen_ai_engineer/
-├── README.md                              # This file
+├── README.md                                    # This file
+├── scripts/
+│   └── convert_to_notebooks.py                  # Regenerate .ipynb from sources
 ├── week1/
 │   ├── day01_neural_networks_backpropagation/
-│   │   ├── Day_01_...ipynb                # Interactive book (Colab ready)
-│   │   ├── README.md                      # Book: Neural Networks & Backprop
-│   │   ├── micrograd.py / .ipynb          # Autograd engine + MLP
-│   │   ├── exercises.py / .ipynb          # Hands-on exercises
-│   │   └── visualizations.py / .ipynb     # 8 concept diagrams
+│   │   ├── Day_01_...ipynb                      # Interactive book (Colab ready)
+│   │   ├── micrograd.ipynb                      # Autograd engine + MLP
+│   │   ├── exercises.ipynb                      # Hands-on exercises
+│   │   ├── visualizations.ipynb                 # Generate 8 concept diagrams
+│   │   └── viz_*.png                            # Pre-generated diagrams
 │   ├── day02_language_modeling_nlp/
-│   │   ├── Day_02_...ipynb                # Interactive book (Colab ready)
-│   │   ├── README.md                      # Book: Language Modeling
-│   │   ├── bigram.py / .ipynb             # Counting-based bigram model
-│   │   ├── bigram_neural.py / .ipynb      # Neural network bigram
-│   │   └── mlp_lm.py / .ipynb            # MLP language model
+│   │   ├── Day_02_...ipynb                      # Interactive book (Colab ready)
+│   │   ├── bigram.ipynb                         # Counting-based bigram model
+│   │   ├── bigram_neural.ipynb                  # Neural network bigram
+│   │   ├── mlp_lm.ipynb                         # MLP language model
+│   │   └── names.txt                            # Dataset (32K names)
 │   ├── day03_transformers/
-│   │   ├── Day_03_...ipynb                # Interactive book (Colab ready)
-│   │   ├── README.md                      # Book: Transformers
-│   │   └── visualizations.py / .ipynb     # 8 transformer diagrams
-│   ├── day04_tokenization_huggingface/
-│   ├── day05_prompt_engineering_llm_apis/
-│   ├── day06_embeddings_vector_databases/
-│   └── day07_review_consolidation/
+│   │   ├── Day_03_...ipynb                      # Interactive book (Colab ready)
+│   │   ├── visualizations.ipynb                 # Generate 8 transformer diagrams
+│   │   └── viz_*.png                            # Pre-generated diagrams
+│   └── day04-07 .../
 ├── week2/
 │   └── day08-14 .../
 └── week3/
