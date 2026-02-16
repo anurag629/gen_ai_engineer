@@ -147,7 +147,7 @@
 </td></tr>
 </table>
 
-**Code:** [Book](week1/day03_transformers/README.md) | [visualizations.py](week1/day03_transformers/visualizations.py)
+**Code:** [Book](week1/day03_transformers/README.md) | [mini_gpt.py](week1/day03_transformers/mini_gpt.py) | [visualizations.py](week1/day03_transformers/visualizations.py)
 
 ---
 
@@ -687,6 +687,7 @@ gen_ai_engineer/
 │   │   └── names.txt                            # Dataset (32K names)
 │   ├── day03_transformers/
 │   │   ├── README.md                            # Book: Transformers
+│   │   ├── mini_gpt.py                          # Decoder-only Transformer LM
 │   │   ├── visualizations.py                    # Generate 8 transformer diagrams
 │   │   └── viz_*.png                            # Pre-generated diagrams
 │   └── day04-07 .../
