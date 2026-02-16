@@ -29,29 +29,29 @@
 
 ## Progress Tracker
 
-| Week | Day | Topic | Open in Colab | Status |
-|:----:|:---:|:------|:-------------:|:------:|
-| 1 | [Day 1](week1/day01_neural_networks_backpropagation/) | Neural Networks & Backpropagation | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/anurag629/gen_ai_engineer/blob/main/week1/day01_neural_networks_backpropagation/Day_01_Neural_Networks_and_Backpropagation.ipynb) | ✅ |
-| 1 | [Day 2](week1/day02_language_modeling_nlp/) | Language Modeling & NLP Basics | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/anurag629/gen_ai_engineer/blob/main/week1/day02_language_modeling_nlp/Day_02_Language_Modeling_and_NLP.ipynb) | ✅ |
-| 1 | [Day 3](week1/day03_transformers/) | Transformers - The Core of All GenAI | [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/anurag629/gen_ai_engineer/blob/main/week1/day03_transformers/Day_03_Transformers.ipynb) | ✅ |
-| 1 | [Day 4](week1/day04_tokenization_huggingface/) | Tokenization & Hugging Face Basics | | ⬜ |
-| 1 | [Day 5](week1/day05_prompt_engineering_llm_apis/) | Prompt Engineering & LLM APIs | | ⬜ |
-| 1 | [Day 6](week1/day06_embeddings_vector_databases/) | Embeddings & Vector Databases | | ⬜ |
-| 1 | [Day 7](week1/day07_review_consolidation/) | Review & Consolidation | | ⬜ |
-| 2 | [Day 8](week2/day08_langchain_fundamentals/) | LangChain Fundamentals | | ⬜ |
-| 2 | [Day 9](week2/day09_rag_basics/) | RAG - Basic Implementation | | ⬜ |
-| 2 | [Day 10](week2/day10_rag_advanced_youtube_project/) | RAG - Advanced + YouTube Project | | ⬜ |
-| 2 | [Day 11](week2/day11_ai_agents_react_pattern/) | AI Agents - Tool Use & ReAct | | ⬜ |
-| 2 | [Day 12](week2/day12_langgraph_multi_step_agents/) | LangGraph & Multi-Step Agents | | ⬜ |
-| 2 | [Day 13](week2/day13_fine_tuning_llms/) | Fine-Tuning LLMs | | ⬜ |
-| 2 | [Day 14](week2/day14_review_refine_integrate/) | Review, Refine & Integrate | | ⬜ |
-| 3 | [Day 15](week3/day15_multi_agent_systems/) | Multi-Agent Systems | | ⬜ |
-| 3 | [Day 16](week3/day16_agentic_rag/) | Agentic RAG & Advanced Patterns | | ⬜ |
-| 3 | [Day 17](week3/day17_deployment_apis/) | Deployment & APIs | | ⬜ |
-| 3 | [Day 18](week3/day18_evaluation_observability/) | Evaluation & Observability | | ⬜ |
-| 3 | [Day 19](week3/day19_multimodal_ai_vision/) | Multimodal AI & Vision | | ⬜ |
-| 3 | [Day 20](week3/day20_ethics_safety/) | Ethics, Safety & Responsible AI | | ⬜ |
-| 3 | [Day 21](week3/day21_portfolio_polish/) | Portfolio Day - Final Polish | | ⬜ |
+| Week | Day | Topic | Status |
+|:----:|:---:|:------|:------:|
+| 1 | [Day 1](week1/day01_neural_networks_backpropagation/) | Neural Networks & Backpropagation | ✅ |
+| 1 | [Day 2](week1/day02_language_modeling_nlp/) | Language Modeling & NLP Basics | ✅ |
+| 1 | [Day 3](week1/day03_transformers/) | Transformers - The Core of All GenAI | ✅ |
+| 1 | [Day 4](week1/day04_tokenization_huggingface/) | Tokenization & Hugging Face Basics | ⬜ |
+| 1 | [Day 5](week1/day05_prompt_engineering_llm_apis/) | Prompt Engineering & LLM APIs | ⬜ |
+| 1 | [Day 6](week1/day06_embeddings_vector_databases/) | Embeddings & Vector Databases | ⬜ |
+| 1 | [Day 7](week1/day07_review_consolidation/) | Review & Consolidation | ⬜ |
+| 2 | [Day 8](week2/day08_langchain_fundamentals/) | LangChain Fundamentals | ⬜ |
+| 2 | [Day 9](week2/day09_rag_basics/) | RAG - Basic Implementation | ⬜ |
+| 2 | [Day 10](week2/day10_rag_advanced_youtube_project/) | RAG - Advanced + YouTube Project | ⬜ |
+| 2 | [Day 11](week2/day11_ai_agents_react_pattern/) | AI Agents - Tool Use & ReAct | ⬜ |
+| 2 | [Day 12](week2/day12_langgraph_multi_step_agents/) | LangGraph & Multi-Step Agents | ⬜ |
+| 2 | [Day 13](week2/day13_fine_tuning_llms/) | Fine-Tuning LLMs | ⬜ |
+| 2 | [Day 14](week2/day14_review_refine_integrate/) | Review, Refine & Integrate | ⬜ |
+| 3 | [Day 15](week3/day15_multi_agent_systems/) | Multi-Agent Systems | ⬜ |
+| 3 | [Day 16](week3/day16_agentic_rag/) | Agentic RAG & Advanced Patterns | ⬜ |
+| 3 | [Day 17](week3/day17_deployment_apis/) | Deployment & APIs | ⬜ |
+| 3 | [Day 18](week3/day18_evaluation_observability/) | Evaluation & Observability | ⬜ |
+| 3 | [Day 19](week3/day19_multimodal_ai_vision/) | Multimodal AI & Vision | ⬜ |
+| 3 | [Day 20](week3/day20_ethics_safety/) | Ethics, Safety & Responsible AI | ⬜ |
+| 3 | [Day 21](week3/day21_portfolio_polish/) | Portfolio Day - Final Polish | ⬜ |
 
 ---
 
@@ -62,8 +62,6 @@
 ---
 
 ### [Day 1: Neural Networks & Backpropagation](week1/day01_neural_networks_backpropagation/)
-
-[![Open Book in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/anurag629/gen_ai_engineer/blob/main/week1/day01_neural_networks_backpropagation/Day_01_Neural_Networks_and_Backpropagation.ipynb)
 
 <table>
 <tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
@@ -89,13 +87,11 @@
 </td></tr>
 </table>
 
-**Notebooks:** [Book](week1/day01_neural_networks_backpropagation/Day_01_Neural_Networks_and_Backpropagation.ipynb) | [micrograd](week1/day01_neural_networks_backpropagation/micrograd.ipynb) | [Exercises](week1/day01_neural_networks_backpropagation/exercises.ipynb) | [Visualizations](week1/day01_neural_networks_backpropagation/visualizations.ipynb)
+**Code:** [Book](week1/day01_neural_networks_backpropagation/README.md) | [micrograd.py](week1/day01_neural_networks_backpropagation/micrograd.py) | [exercises.py](week1/day01_neural_networks_backpropagation/exercises.py) | [visualizations.py](week1/day01_neural_networks_backpropagation/visualizations.py)
 
 ---
 
 ### [Day 2: Language Modeling & NLP Basics](week1/day02_language_modeling_nlp/)
-
-[![Open Book in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/anurag629/gen_ai_engineer/blob/main/week1/day02_language_modeling_nlp/Day_02_Language_Modeling_and_NLP.ipynb)
 
 <table>
 <tr><td><strong>Morning (5 hrs) - Learn</strong></td></tr>
@@ -121,13 +117,11 @@
 </td></tr>
 </table>
 
-**Notebooks:** [Book](week1/day02_language_modeling_nlp/Day_02_Language_Modeling_and_NLP.ipynb) | [Bigram](week1/day02_language_modeling_nlp/bigram.ipynb) | [Neural Bigram](week1/day02_language_modeling_nlp/bigram_neural.ipynb) | [MLP LM](week1/day02_language_modeling_nlp/mlp_lm.ipynb)
+**Code:** [Book](week1/day02_language_modeling_nlp/README.md) | [bigram.py](week1/day02_language_modeling_nlp/bigram.py) | [bigram_neural.py](week1/day02_language_modeling_nlp/bigram_neural.py) | [mlp_lm.py](week1/day02_language_modeling_nlp/mlp_lm.py)
 
 ---
 
 ### [Day 3: Transformers - The Core of All GenAI](week1/day03_transformers/)
-
-[![Open Book in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/anurag629/gen_ai_engineer/blob/main/week1/day03_transformers/Day_03_Transformers.ipynb)
 
 <table>
 <tr><td><strong>Morning (5 hrs) - Learn</strong></td></tr>
@@ -153,7 +147,7 @@
 </td></tr>
 </table>
 
-**Notebooks:** [Book](week1/day03_transformers/Day_03_Transformers.ipynb) | [Visualizations](week1/day03_transformers/visualizations.ipynb)
+**Code:** [Book](week1/day03_transformers/README.md) | [visualizations.py](week1/day03_transformers/visualizations.py)
 
 ---
 
@@ -678,24 +672,22 @@ pip install transformers datasets langchain chromadb sentence-transformers
 ```
 gen_ai_engineer/
 ├── README.md                                    # This file
-├── scripts/
-│   └── convert_to_notebooks.py                  # Regenerate .ipynb from sources
 ├── week1/
 │   ├── day01_neural_networks_backpropagation/
-│   │   ├── Day_01_...ipynb                      # Interactive book (Colab ready)
-│   │   ├── micrograd.ipynb                      # Autograd engine + MLP
-│   │   ├── exercises.ipynb                      # Hands-on exercises
-│   │   ├── visualizations.ipynb                 # Generate 8 concept diagrams
+│   │   ├── README.md                            # Book: Neural Networks & Backprop
+│   │   ├── micrograd.py                         # Autograd engine + MLP
+│   │   ├── exercises.py                         # Hands-on exercises
+│   │   ├── visualizations.py                    # Generate 8 concept diagrams
 │   │   └── viz_*.png                            # Pre-generated diagrams
 │   ├── day02_language_modeling_nlp/
-│   │   ├── Day_02_...ipynb                      # Interactive book (Colab ready)
-│   │   ├── bigram.ipynb                         # Counting-based bigram model
-│   │   ├── bigram_neural.ipynb                  # Neural network bigram
-│   │   ├── mlp_lm.ipynb                         # MLP language model
+│   │   ├── README.md                            # Book: Language Modeling & NLP
+│   │   ├── bigram.py                            # Counting-based bigram model
+│   │   ├── bigram_neural.py                     # Neural network bigram
+│   │   ├── mlp_lm.py                            # MLP language model
 │   │   └── names.txt                            # Dataset (32K names)
 │   ├── day03_transformers/
-│   │   ├── Day_03_...ipynb                      # Interactive book (Colab ready)
-│   │   ├── visualizations.ipynb                 # Generate 8 transformer diagrams
+│   │   ├── README.md                            # Book: Transformers
+│   │   ├── visualizations.py                    # Generate 8 transformer diagrams
 │   │   └── viz_*.png                            # Pre-generated diagrams
 │   └── day04-07 .../
 ├── week2/
