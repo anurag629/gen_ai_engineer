@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Convert README.md books and .py files to Jupyter notebooks with Colab badges."""
+"""Convert README.md books and .py files to Jupyter notebooks with Colab badges.
+
+NOTE: This script was used to generate all .ipynb notebooks from the original
+.md and .py source files. The source files have since been removed (the .ipynb
+notebooks are now the canonical versions). This script is kept for reference
+only and will NOT work if re-run without the original source files.
+"""
 
 import json
 import re
