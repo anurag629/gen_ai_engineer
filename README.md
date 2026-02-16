@@ -1,559 +1,719 @@
 # Gen AI Engineer - 3-Week Intensive Learning Plan
 
-> **Prerequisites you already have:** Python, Pandas, Matplotlib, basic data science
-> **Time commitment:** Full day (~10-12 hours/day)
-> **Approach:** Learn a concept in the morning, build a project in the afternoon/evening
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?logo=pytorch&logoColor=white)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Transformers-FFD21E?logo=huggingface&logoColor=black)
+![LangChain](https://img.shields.io/badge/LangChain-Framework-1C3C3C?logo=langchain&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+**A structured, hands-on path from Python developer to Gen AI Engineer in 21 days.**
+
+[Week 1: Foundations](#week-1-foundations---deep-learning-transformers--llms) | [Week 2: Core Skills](#week-2-core-genai-skills---rag-agents--chains) | [Week 3: Production](#week-3-production-skills-advanced-projects--portfolio) | [Resources](#-quick-reference-all-free-resources) | [Projects](#-project-summary)
+
+</div>
 
 ---
 
-## WEEK 1: Foundations - Deep Learning, Transformers & LLMs
+## Prerequisites
 
-The goal this week is to understand how neural networks and LLMs actually work under the hood. Without this, everything else is just API calls with no understanding.
+| Requirement | Details |
+|:------------|:--------|
+| **Languages** | Python (comfortable with classes, functions, data structures) |
+| **Libraries** | Pandas, Matplotlib, NumPy (basic usage) |
+| **Time** | Full day (~10-12 hours/day) for 3 weeks |
+| **Approach** | Learn concepts in the morning, build projects in the afternoon |
 
 ---
 
-### Day 1: Neural Networks & Backpropagation
+## Progress Tracker
 
-**Learn (Morning - 4 hrs)**
-- Andrej Karpathy - "The spelled-out intro to neural networks and backpropagation: building micrograd"
-  - YouTube: https://www.youtube.com/watch?v=VMj-3S1tku0
+| Week | Day | Topic | Status |
+|:----:|:---:|:------|:------:|
+| 1 | [Day 1](week1/day01_neural_networks_backpropagation/) | Neural Networks & Backpropagation | ✅ |
+| 1 | [Day 2](week1/day02_language_modeling_nlp/) | Language Modeling & NLP Basics | ✅ |
+| 1 | [Day 3](week1/day03_transformers/) | Transformers - The Core of All GenAI | ✅ |
+| 1 | [Day 4](week1/day04_tokenization_huggingface/) | Tokenization & Hugging Face Basics | ⬜ |
+| 1 | [Day 5](week1/day05_prompt_engineering_llm_apis/) | Prompt Engineering & LLM APIs | ⬜ |
+| 1 | [Day 6](week1/day06_embeddings_vector_databases/) | Embeddings & Vector Databases | ⬜ |
+| 1 | [Day 7](week1/day07_review_consolidation/) | Review & Consolidation | ⬜ |
+| 2 | [Day 8](week2/day08_langchain_fundamentals/) | LangChain Fundamentals | ⬜ |
+| 2 | [Day 9](week2/day09_rag_basics/) | RAG - Basic Implementation | ⬜ |
+| 2 | [Day 10](week2/day10_rag_advanced_youtube_project/) | RAG - Advanced + YouTube Project | ⬜ |
+| 2 | [Day 11](week2/day11_ai_agents_react_pattern/) | AI Agents - Tool Use & ReAct | ⬜ |
+| 2 | [Day 12](week2/day12_langgraph_multi_step_agents/) | LangGraph & Multi-Step Agents | ⬜ |
+| 2 | [Day 13](week2/day13_fine_tuning_llms/) | Fine-Tuning LLMs | ⬜ |
+| 2 | [Day 14](week2/day14_review_refine_integrate/) | Review, Refine & Integrate | ⬜ |
+| 3 | [Day 15](week3/day15_multi_agent_systems/) | Multi-Agent Systems | ⬜ |
+| 3 | [Day 16](week3/day16_agentic_rag/) | Agentic RAG & Advanced Patterns | ⬜ |
+| 3 | [Day 17](week3/day17_deployment_apis/) | Deployment & APIs | ⬜ |
+| 3 | [Day 18](week3/day18_evaluation_observability/) | Evaluation & Observability | ⬜ |
+| 3 | [Day 19](week3/day19_multimodal_ai_vision/) | Multimodal AI & Vision | ⬜ |
+| 3 | [Day 20](week3/day20_ethics_safety/) | Ethics, Safety & Responsible AI | ⬜ |
+| 3 | [Day 21](week3/day21_portfolio_polish/) | Portfolio Day - Final Polish | ⬜ |
+
+---
+
+## Week 1: Foundations - Deep Learning, Transformers & LLMs
+
+> Understand how neural networks and LLMs actually work under the hood. Without this, everything else is just API calls with no understanding.
+
+---
+
+### [Day 1: Neural Networks & Backpropagation](week1/day01_neural_networks_backpropagation/)
+
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
+
+- Andrej Karpathy - [The spelled-out intro to neural networks and backpropagation: building micrograd](https://www.youtube.com/watch?v=VMj-3S1tku0)
 - Follow along and code micrograd yourself
 
-**Build (Afternoon - 4 hrs)**
+</td></tr>
+<tr><td><strong>Afternoon (4 hrs) - Build</strong></td></tr>
+<tr><td>
+
 - Rebuild micrograd from scratch without looking at the video
-- Extend it: add tanh, relu, sigmoid activation functions
+- Extend it: add `tanh`, `relu`, `sigmoid` activation functions
 - Train a small classifier on a toy dataset
 
-**Resources:**
-- GitHub repo: https://github.com/karpathy/micrograd
+</td></tr>
+<tr><td><strong>Resources</strong></td></tr>
+<tr><td>
+
+- [micrograd GitHub repo](https://github.com/karpathy/micrograd)
+
+</td></tr>
+</table>
+
+**What's inside:** Complete autograd engine, MLP implementation, 8 concept visualizations, exercises, interview prep
 
 ---
 
-### Day 2: Language Modeling & NLP Basics
+### [Day 2: Language Modeling & NLP Basics](week1/day02_language_modeling_nlp/)
 
-**Learn (Morning - 5 hrs)**
-- Karpathy - "The spelled-out intro to language modeling: building makemore"
-  - YouTube: https://www.youtube.com/watch?v=PaCmpygFfXo
-- Karpathy - "Building makemore Part 2: MLP"
-  - YouTube: https://www.youtube.com/watch?v=TCH_1BHY58I
+<table>
+<tr><td><strong>Morning (5 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 4 hrs)**
+- Karpathy - [The spelled-out intro to language modeling: building makemore](https://www.youtube.com/watch?v=PaCmpygFfXo)
+- Karpathy - [Building makemore Part 2: MLP](https://www.youtube.com/watch?v=TCH_1BHY58I)
+
+</td></tr>
+<tr><td><strong>Afternoon (4 hrs) - Build</strong></td></tr>
+<tr><td>
+
 - Build a character-level name generator from scratch
-- Train it on a dataset of Indian names (download from Kaggle)
+- Train it on a dataset of names
 - Experiment: change hidden layer sizes, learning rates, plot loss curves with matplotlib
 
-**Resources:**
-- GitHub: https://github.com/karpathy/makemore
+</td></tr>
+<tr><td><strong>Resources</strong></td></tr>
+<tr><td>
+
+- [makemore GitHub repo](https://github.com/karpathy/makemore)
+
+</td></tr>
+</table>
+
+**What's inside:** Bigram model, neural bigram, MLP language model (Bengio 2003), embedding visualizations, interview prep
 
 ---
 
-### Day 3: Transformers - The Core of All GenAI
+### [Day 3: Transformers - The Core of All GenAI](week1/day03_transformers/)
 
-**Learn (Morning - 5 hrs)**
-- Karpathy - "Let's build GPT: from scratch, in code, spelled out"
-  - YouTube: https://www.youtube.com/watch?v=kCc8FmEb1nY
-- Read the blog: "The Illustrated Transformer" by Jay Alammar
-  - https://jalammar.github.io/illustrated-transformer/
+<table>
+<tr><td><strong>Morning (5 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
+- Karpathy - [Let's build GPT: from scratch, in code, spelled out](https://www.youtube.com/watch?v=kCc8FmEb1nY)
+- Jay Alammar - [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/)
+
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
+
 - Code a mini GPT from scratch following Karpathy's video
 - Train it on a text file of your choice (Shakespeare, song lyrics, etc.)
 - Generate text and observe how quality changes with training
 
-**Resources:**
-- GitHub: https://github.com/karpathy/nanoGPT
+</td></tr>
+<tr><td><strong>Resources</strong></td></tr>
+<tr><td>
+
+- [nanoGPT GitHub repo](https://github.com/karpathy/nanoGPT)
+
+</td></tr>
+</table>
+
+**What's inside:** Self-attention, Q/K/V, multi-head attention, positional encoding, Mini GPT, 8 transformer visualizations, interview prep
 
 ---
 
-### Day 4: Tokenization & Hugging Face Basics
+### [Day 4: Tokenization & Hugging Face Basics](week1/day04_tokenization_huggingface/)
 
-**Learn (Morning - 4 hrs)**
-- Karpathy - "Let's build the GPT Tokenizer"
-  - YouTube: https://www.youtube.com/watch?v=zduSFxRajkE
-- Hugging Face LLM Course - Chapter 1: Introduction to Transformers
-  - https://huggingface.co/learn/llm-course/chapter1/1
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
+- Karpathy - [Let's build the GPT Tokenizer](https://www.youtube.com/watch?v=zduSFxRajkE)
+- [Hugging Face LLM Course - Chapter 1](https://huggingface.co/learn/llm-course/chapter1/1)
+
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
+
 - Build a BPE tokenizer from scratch
-- Then use Hugging Face `transformers` library:
-  ```
-  pip install transformers datasets accelerate
-  ```
-- Load a pre-trained model (GPT-2), generate text, experiment with temperature and top-k/top-p sampling
-- Compare outputs of different models: GPT-2, DistilGPT-2, GPT-2-medium
+- Use Hugging Face `transformers` library to load pre-trained models (GPT-2)
+- Generate text, experiment with temperature and top-k/top-p sampling
+- Compare outputs: GPT-2, DistilGPT-2, GPT-2-medium
 
----
+</td></tr>
+</table>
 
-### Day 5: Prompt Engineering & LLM APIs
-
-**Learn (Morning - 4 hrs)**
-- DeepLearning.AI - "ChatGPT Prompt Engineering for Developers" (free, ~1.5 hrs)
-  - https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
-- DeepLearning.AI - "Building Systems with the ChatGPT API" (free, ~1.5 hrs)
-  - https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/
-
-**Build (Afternoon - 6 hrs)**
-
-**PROJECT 1: AI-Powered Resume Analyzer**
-Build a Python CLI tool that:
-- Takes a resume (PDF/text) as input
-- Uses OpenAI/Anthropic API to:
-  - Extract skills, experience, education
-  - Score the resume against a job description
-  - Suggest improvements
-  - Generate a cover letter draft
-- Save results as a structured JSON + markdown report
-
-```
-You'll need (free tiers available):
-- OpenAI API key (free $5 credit for new accounts) OR
-- Google Gemini API key (free tier: 60 requests/min) OR
-- Groq API key (free tier: very generous)
+```bash
+pip install transformers datasets accelerate
 ```
 
 ---
 
-### Day 6: Embeddings & Vector Databases
+### [Day 5: Prompt Engineering & LLM APIs](week1/day05_prompt_engineering_llm_apis/)
 
-**Learn (Morning - 4 hrs)**
-- DeepLearning.AI - "Building Applications with Vector Databases" (free)
-  - https://www.deeplearning.ai/short-courses/building-applications-vector-databases/
-- Read: "What are Embeddings?" - Vicki Boykis
-  - https://vickiboykis.com/what_are_embeddings/
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
+- DeepLearning.AI - [ChatGPT Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/) (free, ~1.5 hrs)
+- DeepLearning.AI - [Building Systems with the ChatGPT API](https://www.deeplearning.ai/short-courses/building-systems-with-chatgpt/) (free, ~1.5 hrs)
 
-**PROJECT 2: Semantic Search Engine for Your Notes**
-Build a local semantic search engine:
-- Collect 50+ text files/notes/articles (or scrape Wikipedia articles)
-- Generate embeddings using a free model:
-  - `sentence-transformers/all-MiniLM-L6-v2` (runs locally, no API needed)
-- Store in ChromaDB (free, local vector database)
-- Build a CLI where you type a question and get the most relevant documents
-- Add a re-ranking step using cross-encoder
+</td></tr>
+<tr><td><strong>Afternoon (6 hrs) - Build</strong></td></tr>
+<tr><td>
 
-```
+**Project 1: AI-Powered Resume Analyzer** - A Python CLI tool that takes a resume as input, extracts skills/experience/education, scores against a job description, suggests improvements, and generates a cover letter draft.
+
+</td></tr>
+</table>
+
+> **Free API keys needed:** [Google Gemini](https://aistudio.google.com/) (60 req/min) | [Groq](https://console.groq.com/) (generous free tier) | [OpenAI](https://platform.openai.com/) ($5 credit)
+
+---
+
+### [Day 6: Embeddings & Vector Databases](week1/day06_embeddings_vector_databases/)
+
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
+
+- DeepLearning.AI - [Building Applications with Vector Databases](https://www.deeplearning.ai/short-courses/building-applications-vector-databases/) (free)
+- Vicki Boykis - [What are Embeddings?](https://vickiboykis.com/what_are_embeddings/)
+
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
+
+**Project 2: Semantic Search Engine for Your Notes** - Collect 50+ text files, generate embeddings with `sentence-transformers/all-MiniLM-L6-v2` (runs locally), store in ChromaDB, build a CLI for semantic search with cross-encoder re-ranking.
+
+</td></tr>
+</table>
+
+```bash
 pip install chromadb sentence-transformers
 ```
 
 ---
 
-### Day 7: Review & Consolidation
+### [Day 7: Review & Consolidation](week1/day07_review_consolidation/)
 
-**Morning (4 hrs)**
-- Review all code you wrote this week
-- Revisit any concepts that felt weak
-- Read: Hugging Face LLM Course Chapters 2-3
-  - https://huggingface.co/learn/llm-course/chapter2/1
+<table>
+<tr><td><strong>Morning (4 hrs)</strong></td></tr>
+<tr><td>
 
-**Afternoon (5 hrs)**
+- Review all code from the week
+- Revisit any weak concepts
+- Read: [Hugging Face LLM Course Chapters 2-3](https://huggingface.co/learn/llm-course/chapter2/1)
+
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs)</strong></td></tr>
+<tr><td>
+
 - Clean up Project 1 and Project 2
 - Add proper error handling, README files, push to GitHub
-- Write a short blog post / notes about what you learned (for your own reference)
+- Write a short blog post / notes about what you learned
+
+</td></tr>
+</table>
 
 ---
 
-## WEEK 2: Core GenAI Skills - RAG, Agents & Chains
+## Week 2: Core GenAI Skills - RAG, Agents & Chains
 
-This week you learn the bread-and-butter of a Gen AI Engineer: building applications that combine LLMs with external data and tools.
+> Learn the bread-and-butter of a Gen AI Engineer: building applications that combine LLMs with external data and tools.
 
 ---
 
-### Day 8: LangChain Fundamentals
+### [Day 8: LangChain Fundamentals](week2/day08_langchain_fundamentals/)
 
-**Learn (Morning - 5 hrs)**
-- LangChain official tutorials (free):
-  - https://python.langchain.com/docs/tutorials/
-  - Complete: "Build a Simple LLM Application"
-  - Complete: "Build a Chatbot"
-  - Complete: "Build a Retrieval Augmented Generation (RAG) app"
+<table>
+<tr><td><strong>Morning (5 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
+- [LangChain Official Tutorials](https://python.langchain.com/docs/tutorials/):
+  - Build a Simple LLM Application
+  - Build a Chatbot
+  - Build a RAG app
+
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
+
 - Set up a LangChain project from scratch
-- Build chains: simple chain -> sequential chain -> chain with memory
-- Experiment with different LLMs through LangChain (OpenAI, Groq/Llama, Gemini)
+- Build chains: simple -> sequential -> chain with memory
+- Experiment with different LLMs (OpenAI, Groq/Llama, Gemini)
 - Add conversation memory (BufferMemory, SummaryMemory)
 
-```
+</td></tr>
+</table>
+
+```bash
 pip install langchain langchain-openai langchain-community
 ```
 
 ---
 
-### Day 9-10: RAG (Retrieval Augmented Generation) - Deep Dive
+### [Day 9-10: RAG Deep Dive](week2/day09_rag_basics/)
 
-**Day 9 - Learn & Build Basic RAG (10 hrs)**
+<table>
+<tr><td><strong>Day 9 - Learn & Build Basic RAG (10 hrs)</strong></td></tr>
+<tr><td>
 
-- DeepLearning.AI - "LangChain: Chat with Your Data" (free)
-  - https://www.deeplearning.ai/short-courses/langchain-chat-with-your-data/
-- Hugging Face Blog - "Code a simple RAG from scratch"
-  - https://huggingface.co/blog/ngxson/make-your-own-rag
-- LangChain RAG tutorial:
-  - https://python.langchain.com/docs/tutorials/rag/
+- DeepLearning.AI - [LangChain: Chat with Your Data](https://www.deeplearning.ai/short-courses/langchain-chat-with-your-data/) (free)
+- Hugging Face Blog - [Code a simple RAG from scratch](https://huggingface.co/blog/ngxson/make-your-own-rag)
+- [LangChain RAG Tutorial](https://python.langchain.com/docs/tutorials/rag/)
 
-**Day 10 - Build Advanced RAG (10 hrs)**
+</td></tr>
+<tr><td><strong>Day 10 - Build Advanced RAG (10 hrs)</strong></td></tr>
+<tr><td>
 
-**PROJECT 3: Chat With Any YouTube Channel**
-Build a full RAG application that:
-- Takes a YouTube channel URL
-- Downloads transcripts of the last 20 videos (use `youtube-transcript-api`)
-- Chunks transcripts intelligently (experiment with chunk sizes: 256, 512, 1024)
-- Embeds and stores in ChromaDB
-- Lets you ask questions like:
-  - "What does this creator think about Python vs JavaScript?"
-  - "Summarize their views on AI"
-  - "What topics do they cover most?"
-- Add source citations (which video + timestamp)
-- Build a simple Streamlit UI
+**[Project 3: Chat With Any YouTube Channel](week2/day10_rag_advanced_youtube_project/)** - Download transcripts of last 20 videos, chunk intelligently (256, 512, 1024), embed and store in ChromaDB, build Q&A with source citations (video + timestamp), Streamlit UI.
 
-```
+</td></tr>
+</table>
+
+**Key RAG concepts to implement:**
+
+| Concept | Description |
+|:--------|:------------|
+| Document Loading | Text splitting strategies for different content types |
+| Embedding Models | OpenAI embeddings vs local sentence-transformers |
+| Vector Store | ChromaDB for storage and retrieval |
+| Retrieval Strategies | Similarity search, MMR (Maximum Marginal Relevance) |
+| Prompt Templates | QA with context injection |
+
+```bash
 pip install youtube-transcript-api streamlit chromadb langchain
 ```
 
-**Key RAG concepts to implement:**
-- Document loading & text splitting strategies
-- Embedding models (try both OpenAI and local sentence-transformers)
-- Vector store (ChromaDB)
-- Retrieval strategies: similarity search, MMR (Maximum Marginal Relevance)
-- Prompt templates for QA with context
-
 ---
 
-### Day 11: AI Agents - Tool Use & ReAct Pattern
+### [Day 11: AI Agents - Tool Use & ReAct Pattern](week2/day11_ai_agents_react_pattern/)
 
-**Learn (Morning - 5 hrs)**
-- DeepLearning.AI - "Functions, Tools and Agents with LangChain" (free)
-  - https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/
-- Microsoft's "AI Agents for Beginners" - Lessons 1-4 (free)
-  - https://github.com/microsoft/ai-agents-for-beginners
-- Read about the ReAct pattern:
-  - https://www.promptingguide.ai/techniques/react
+<table>
+<tr><td><strong>Morning (5 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
-- Build a simple agent with LangChain that can:
-  - Search the web (using Tavily or DuckDuckGo search)
-  - Do math calculations
-  - Read/write files
-  - Execute Python code
-- Understand the Thought -> Action -> Observation loop
+- DeepLearning.AI - [Functions, Tools and Agents with LangChain](https://www.deeplearning.ai/short-courses/functions-tools-agents-langchain/) (free)
+- Microsoft - [AI Agents for Beginners, Lessons 1-4](https://github.com/microsoft/ai-agents-for-beginners)
+- [ReAct Pattern](https://www.promptingguide.ai/techniques/react)
 
-```
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
+
+- Build an agent with LangChain that can search the web, do math, read/write files, and execute Python code
+- Understand the **Thought -> Action -> Observation** loop
+
+</td></tr>
+</table>
+
+```bash
 pip install langchain-community duckduckgo-search
 ```
 
 ---
 
-### Day 12: LangGraph & Multi-Step Agents
+### [Day 12: LangGraph & Multi-Step Agents](week2/day12_langgraph_multi_step_agents/)
 
-**Learn (Morning - 4 hrs)**
-- LangChain Academy - "Introduction to LangGraph" (free)
-  - https://academy.langchain.com/courses/intro-to-langgraph
-- LangGraph documentation + tutorials:
-  - https://langchain-ai.github.io/langgraph/tutorials/
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 6 hrs)**
+- [LangChain Academy - Intro to LangGraph](https://academy.langchain.com/courses/intro-to-langgraph) (free)
+- [LangGraph Tutorials](https://langchain-ai.github.io/langgraph/tutorials/)
 
-**PROJECT 4: AI Research Agent**
-Build an agent using LangGraph that:
-- Takes a research topic as input
-- Step 1: Generates 5 search queries about the topic
-- Step 2: Searches the web for each query (DuckDuckGo)
-- Step 3: Reads and summarizes each result
-- Step 4: Synthesizes all summaries into a coherent research report
-- Step 5: Identifies gaps and generates follow-up questions
-- Has a graph-based workflow with conditional edges (if results are poor, retry with different queries)
-- Outputs a structured markdown report
+</td></tr>
+<tr><td><strong>Afternoon (6 hrs) - Build</strong></td></tr>
+<tr><td>
 
-```
+**Project 4: AI Research Agent** - An agent using LangGraph that generates search queries, searches the web, summarizes results, synthesizes a research report, and identifies follow-up questions. Graph-based workflow with conditional edges.
+
+</td></tr>
+</table>
+
+```bash
 pip install langgraph langchain-openai tavily-python
 ```
 
 ---
 
-### Day 13: Fine-Tuning LLMs
+### [Day 13: Fine-Tuning LLMs](week2/day13_fine_tuning_llms/)
 
-**Learn (Morning - 5 hrs)**
-- DeepLearning.AI - "Finetuning Large Language Models" (free)
-  - https://www.deeplearning.ai/short-courses/finetuning-large-language-models/
-- Hugging Face LLM Course - Chapter 11: Fine-tuning LLMs
-  - https://huggingface.co/learn/llm-course/chapter11/1
-- Read about LoRA and QLoRA:
-  - https://huggingface.co/docs/peft/conceptual_guides/lora
+<table>
+<tr><td><strong>Morning (5 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
+- DeepLearning.AI - [Finetuning Large Language Models](https://www.deeplearning.ai/short-courses/finetuning-large-language-models/) (free)
+- [Hugging Face LLM Course - Chapter 11](https://huggingface.co/learn/llm-course/chapter11/1)
+- [LoRA and QLoRA Guide](https://huggingface.co/docs/peft/conceptual_guides/lora)
 
-**PROJECT 5: Fine-Tune a Model for Your Use Case**
-- Pick a task: sentiment analysis on product reviews, code explanation, or Q&A on a specific domain
-- Use Hugging Face + PEFT (Parameter Efficient Fine-Tuning):
-  - Load a small model (e.g., `microsoft/phi-2` or `TinyLlama/TinyLlama-1.1B`)
-  - Apply LoRA adapters
-  - Fine-tune on a dataset from Hugging Face Hub
-  - Evaluate before vs after fine-tuning
-- If you don't have a GPU, use Google Colab free tier (T4 GPU)
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
 
-```
+**Project 5: Fine-Tune a Model for Your Use Case** - Pick a task (sentiment analysis, code explanation, domain Q&A), apply LoRA adapters to a small model (`phi-2` or `TinyLlama`), evaluate before vs after. Use Google Colab free tier if no GPU.
+
+</td></tr>
+</table>
+
+```bash
 pip install peft transformers datasets accelerate bitsandbytes
 ```
 
 ---
 
-### Day 14: Review, Refine & Integrate
+### [Day 14: Review, Refine & Integrate](week2/day14_review_refine_integrate/)
 
-**Morning (4 hrs)**
+<table>
+<tr><td><strong>Morning (4 hrs)</strong></td></tr>
+<tr><td>
+
 - Review Week 2 projects
-- Revisit RAG concepts: try different chunking strategies, compare retrieval methods
-- Read: NirDiamant's GenAI Agents repo for more patterns
-  - https://github.com/NirDiamant/GenAI_Agents
+- Try different chunking strategies, compare retrieval methods
+- Read: [NirDiamant's GenAI Agents](https://github.com/NirDiamant/GenAI_Agents) for more patterns
 
-**Afternoon (5 hrs)**
-- Improve Project 3 (RAG) with:
-  - Hybrid search (keyword + semantic)
-  - Query rewriting (let the LLM rephrase the user's question for better retrieval)
-  - Add a simple evaluation: create 10 Q&A pairs and measure answer quality
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs)</strong></td></tr>
+<tr><td>
+
+- Improve Project 3 (RAG): hybrid search, query rewriting, simple evaluation with 10 Q&A pairs
 - Push all projects to GitHub with good READMEs
 
----
-
-## WEEK 3: Production Skills, Advanced Projects & Portfolio
-
-This week you build production-grade projects and learn deployment. This is what separates a learner from a hirable engineer.
+</td></tr>
+</table>
 
 ---
 
-### Day 15: Multi-Agent Systems
+## Week 3: Production Skills, Advanced Projects & Portfolio
 
-**Learn (Morning - 4 hrs)**
-- DeepLearning.AI - "Multi AI Agent Systems with crewAI" (free)
-  - https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/
-- Browse: 500 AI Agent Projects for ideas
-  - https://github.com/ashishpatel26/500-AI-Agents-Projects
+> Build production-grade projects and learn deployment. This is what separates a learner from a hirable engineer.
 
-**Build (Afternoon - 6 hrs)**
+---
 
-**PROJECT 6: AI Content Creation Pipeline (Multi-Agent)**
-Build a multi-agent system using CrewAI or LangGraph:
-- **Agent 1 - Researcher:** Takes a topic, searches the web, gathers facts
-- **Agent 2 - Writer:** Takes research, writes a blog post draft
-- **Agent 3 - Editor:** Reviews the draft, checks facts, improves quality
-- **Agent 4 - SEO Optimizer:** Adds keywords, meta description, suggests title variants
-- Output: A publish-ready blog post with sources
+### [Day 15: Multi-Agent Systems](week3/day15_multi_agent_systems/)
 
-```
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
+
+- DeepLearning.AI - [Multi AI Agent Systems with crewAI](https://www.deeplearning.ai/short-courses/multi-ai-agent-systems-with-crewai/) (free)
+- Browse: [500 AI Agent Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) for ideas
+
+</td></tr>
+<tr><td><strong>Afternoon (6 hrs) - Build</strong></td></tr>
+<tr><td>
+
+**Project 6: AI Content Creation Pipeline** - Multi-agent system using CrewAI: Researcher (gathers facts), Writer (drafts blog post), Editor (reviews & improves), SEO Optimizer (keywords, meta descriptions). Output: publish-ready blog post.
+
+</td></tr>
+</table>
+
+```bash
 pip install crewai crewai-tools
 ```
 
 ---
 
-### Day 16: Agentic RAG & Advanced Patterns
+### [Day 16: Agentic RAG & Advanced Patterns](week3/day16_agentic_rag/)
 
-**Learn (Morning - 4 hrs)**
-- DeepLearning.AI - "Building Agentic RAG with LlamaIndex" (free)
-  - https://www.deeplearning.ai/short-courses/building-agentic-rag-with-llamaindex/
-- DataCamp tutorial on Agentic RAG:
-  - https://www.datacamp.com/tutorial/agentic-rag-tutorial
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 6 hrs)**
+- DeepLearning.AI - [Building Agentic RAG with LlamaIndex](https://www.deeplearning.ai/short-courses/building-agentic-rag-with-llamaindex/) (free)
+- [DataCamp Agentic RAG Tutorial](https://www.datacamp.com/tutorial/agentic-rag-tutorial)
 
-**PROJECT 7: AI Coding Assistant (Agentic RAG)**
-Build an agentic RAG system that:
-- Indexes a GitHub repository's codebase (clone -> read files -> chunk -> embed)
-- Answers questions about the code: "How does authentication work?", "Where is the database connected?"
-- Can navigate between files following imports
-- Uses an agent loop: if the first retrieval isn't enough, it reformulates and searches again
-- Add tool: the agent can run `grep`-like searches on the codebase for exact matches
+</td></tr>
+<tr><td><strong>Afternoon (6 hrs) - Build</strong></td></tr>
+<tr><td>
 
-```
+**Project 7: AI Coding Assistant** - Agentic RAG that indexes a GitHub repo's codebase, answers questions about it, navigates between files following imports, and uses an agent loop to reformulate queries when first retrieval isn't sufficient.
+
+</td></tr>
+</table>
+
+```bash
 pip install llama-index llama-index-vector-stores-chroma
 ```
 
 ---
 
-### Day 17: Deployment & APIs
+### [Day 17: Deployment & APIs](week3/day17_deployment_apis/)
 
-**Learn (Morning - 3 hrs)**
-- FastAPI crash course (free):
-  - https://fastapi.tiangolo.com/tutorial/
-- Streamlit docs (for rapid UI):
-  - https://docs.streamlit.io/get-started
-- Docker basics for ML (if not known):
-  - https://docs.docker.com/get-started/
+<table>
+<tr><td><strong>Morning (3 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 7 hrs)**
+- [FastAPI Tutorial](https://fastapi.tiangolo.com/tutorial/)
+- [Streamlit Docs](https://docs.streamlit.io/get-started)
+- [Docker Get Started](https://docs.docker.com/get-started/)
 
-**PROJECT 8: Deploy Your Best RAG App as a Full Product**
-Take your best project (Project 3 or 7) and make it production-ready:
-- Wrap it in a **FastAPI** backend with proper endpoints:
-  - `POST /upload` - upload documents
-  - `POST /ask` - ask a question
-  - `GET /history` - get conversation history
-- Build a **Streamlit** frontend
-- Add:
-  - Conversation memory (store in SQLite)
-  - Streaming responses (Server-Sent Events)
-  - Error handling and input validation
-  - Rate limiting
-- Dockerize the whole thing
-- Deploy free on:
-  - **Streamlit Cloud** (streamlit.io) OR
-  - **Hugging Face Spaces** (huggingface.co/spaces) OR
-  - **Railway.app** (free tier)
+</td></tr>
+<tr><td><strong>Afternoon (7 hrs) - Build</strong></td></tr>
+<tr><td>
+
+**Project 8: Deploy Your Best RAG App as a Full Product** - FastAPI backend (`POST /upload`, `POST /ask`, `GET /history`), Streamlit frontend, SQLite for conversation memory, streaming responses, Docker, deploy on Streamlit Cloud / HF Spaces / Railway.
+
+</td></tr>
+</table>
 
 ---
 
-### Day 18: Evaluation & Observability
+### [Day 18: Evaluation & Observability](week3/day18_evaluation_observability/)
 
-**Learn (Morning - 4 hrs)**
-- DeepLearning.AI - "Building and Evaluating Advanced RAG" (free)
-  - https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/
-- Learn about LLM evaluation frameworks:
-  - RAGAS: https://docs.ragas.io/en/latest/
-  - DeepEval: https://docs.confident-ai.com/
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
-- Add evaluation to your RAG project:
-  - Create a test dataset of 20+ question-answer pairs
-  - Measure: faithfulness, answer relevancy, context precision, context recall
-  - Use RAGAS framework
-  - Generate an evaluation report
-  - Iterate: change chunk size, embedding model, prompt template and re-evaluate
+- DeepLearning.AI - [Building and Evaluating Advanced RAG](https://www.deeplearning.ai/short-courses/building-evaluating-advanced-rag/) (free)
+- [RAGAS Documentation](https://docs.ragas.io/en/latest/)
+- [DeepEval Documentation](https://docs.confident-ai.com/)
 
-```
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
+
+- Create a test dataset of 20+ question-answer pairs
+- Measure: faithfulness, answer relevancy, context precision, context recall
+- Use RAGAS framework, generate evaluation reports
+- Iterate: change chunk size, embedding model, prompt template and re-evaluate
+
+</td></tr>
+</table>
+
+```bash
 pip install ragas deepeval
 ```
 
 ---
 
-### Day 19: Multimodal AI & Vision
+### [Day 19: Multimodal AI & Vision](week3/day19_multimodal_ai_vision/)
 
-**Learn (Morning - 4 hrs)**
-- DeepLearning.AI - "Prompt Engineering for Vision Models" (free)
-  - https://www.deeplearning.ai/short-courses/prompt-engineering-for-vision-models/
-- Explore multimodal models:
-  - GPT-4o (vision capabilities via API)
-  - LLaVA (open source, runs locally)
-  - Google Gemini (free API, multimodal)
+<table>
+<tr><td><strong>Morning (4 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 6 hrs)**
+- DeepLearning.AI - [Prompt Engineering for Vision Models](https://www.deeplearning.ai/short-courses/prompt-engineering-for-vision-models/) (free)
+- Explore: GPT-4o (vision API), LLaVA (open source), Google Gemini (free multimodal API)
 
-**PROJECT 9: AI Invoice/Receipt Processor**
-Build a multimodal AI application that:
-- Takes photos of invoices/receipts (upload images)
-- Uses a vision model to extract:
-  - Vendor name, date, total amount, line items, tax
-- Structures the data as JSON
-- Stores in a SQLite database
-- Generates monthly expense reports with charts (use matplotlib/plotly)
-- Streamlit UI for uploading and viewing reports
+</td></tr>
+<tr><td><strong>Afternoon (6 hrs) - Build</strong></td></tr>
+<tr><td>
+
+**Project 9: AI Invoice/Receipt Processor** - Upload photos of invoices/receipts, extract vendor name, date, total, line items, tax using a vision model, store in SQLite, generate monthly expense reports with charts, Streamlit UI.
+
+</td></tr>
+</table>
 
 ---
 
-### Day 20: Ethics, Safety & Responsible AI
+### [Day 20: Ethics, Safety & Responsible AI](week3/day20_ethics_safety/)
 
-**Learn (Morning - 3 hrs)**
-- DeepLearning.AI - "Generative AI for Everyone" by Andrew Ng (free on Coursera)
-  - https://www.coursera.org/learn/generative-ai-for-everyone
-  - Focus on Weeks 2-3 covering limitations, risks, responsible use
-- Read about:
-  - Hallucination mitigation strategies
-  - Prompt injection attacks and defenses
-  - Bias in LLMs
-  - EU AI Act basics
+<table>
+<tr><td><strong>Morning (3 hrs) - Learn</strong></td></tr>
+<tr><td>
 
-**Build (Afternoon - 5 hrs)**
-- Add safety features to your projects:
-  - Input validation / prompt injection detection
-  - Output guardrails (check for harmful content)
-  - Implement a simple content filter
-- Experiment with red-teaming your own chatbot: try to make it say something wrong
+- [Generative AI for Everyone by Andrew Ng](https://www.coursera.org/learn/generative-ai-for-everyone) (free on Coursera, focus Weeks 2-3)
+- Topics: hallucination mitigation, prompt injection attacks & defenses, bias in LLMs, EU AI Act basics
+
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs) - Build</strong></td></tr>
+<tr><td>
+
+- Add safety features: input validation, prompt injection detection, output guardrails, content filters
+- Red-team your own chatbot: try to make it produce incorrect outputs
+
+</td></tr>
+</table>
 
 ---
 
-### Day 21: Portfolio Day - Final Polish & Next Steps
+### [Day 21: Portfolio Day - Final Polish](week3/day21_portfolio_polish/)
 
-**Morning (5 hrs)**
-- Pick your **3 best projects** and polish them:
-  - Clean code, proper docstrings for public functions
-  - Comprehensive README with:
-    - What it does (with screenshots/GIFs)
-    - Architecture diagram (use draw.io or excalidraw)
-    - How to run it
-    - Tech stack
-  - Push to GitHub with proper `.gitignore`, `requirements.txt`
+<table>
+<tr><td><strong>Morning (5 hrs)</strong></td></tr>
+<tr><td>
 
-**Afternoon (5 hrs)**
+- Pick your **3 best projects** and polish them
+- Clean code, proper docstrings, comprehensive READMEs with screenshots/GIFs
+- Architecture diagrams, tech stack documentation
+
+</td></tr>
+<tr><td><strong>Afternoon (5 hrs)</strong></td></tr>
+<tr><td>
+
 - Create a portfolio page (GitHub profile README or simple site)
-- Write a LinkedIn post about your 3-week learning journey
-- Plan your continued learning:
-  - Join communities: r/LocalLLaMA, Hugging Face Discord, LangChain Discord
-  - Follow: Andrej Karpathy, Simon Willison, Harrison Chase, Lilian Weng's blog
-  - Contribute to open source: LangChain, LlamaIndex, or Hugging Face repos
+- Write a LinkedIn post about your 3-week journey
+- Plan continued learning: communities, people to follow, open source contributions
+
+</td></tr>
+</table>
 
 ---
 
-## Quick Reference: All Free Resources
+## 📚 Quick Reference: All Free Resources
 
-### Video Courses (Free)
-| Resource | Link | Topics |
-|---|---|---|
-| Karpathy - Zero to Hero | https://karpathy.ai/zero-to-hero.html | Neural nets, GPT from scratch |
-| DeepLearning.AI Short Courses | https://learn.deeplearning.ai/ | Prompt eng, RAG, agents, fine-tuning |
-| Hugging Face LLM Course | https://huggingface.co/learn/llm-course/chapter1/1 | Transformers, NLP, fine-tuning |
-| LangChain Academy | https://academy.langchain.com/ | LangGraph, agents |
-| Microsoft AI Agents for Beginners | https://github.com/microsoft/ai-agents-for-beginners | 12 lessons on AI agents |
-| CS50 AI (Harvard) | https://cs50.harvard.edu/ai/ | AI foundations |
+### Video Courses
 
-### Documentation (Free)
-| Resource | Link |
-|---|---|
-| LangChain Docs & Tutorials | https://python.langchain.com/docs/tutorials/ |
-| LangGraph Tutorials | https://langchain-ai.github.io/langgraph/tutorials/ |
-| Hugging Face Docs | https://huggingface.co/docs |
-| OpenAI Cookbook | https://cookbook.openai.com/ |
-| Anthropic Claude Docs | https://docs.anthropic.com/ |
-| LlamaIndex Docs | https://docs.llamaindex.ai/ |
+| Resource | Topics | Duration |
+|:---------|:-------|:---------|
+| [Karpathy - Zero to Hero](https://karpathy.ai/zero-to-hero.html) | Neural nets, GPT from scratch | ~20 hrs |
+| [DeepLearning.AI Short Courses](https://learn.deeplearning.ai/) | Prompt eng, RAG, agents, fine-tuning | ~1-2 hrs each |
+| [Hugging Face LLM Course](https://huggingface.co/learn/llm-course/chapter1/1) | Transformers, NLP, fine-tuning | Self-paced |
+| [LangChain Academy](https://academy.langchain.com/) | LangGraph, agents | Self-paced |
+| [Microsoft AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners) | 12 lessons on AI agents | Self-paced |
+| [CS50 AI (Harvard)](https://cs50.harvard.edu/ai/) | AI foundations | ~12 weeks |
 
-### GitHub Repos (Free)
-| Repo | Link | Use |
-|---|---|---|
-| NirDiamant/GenAI_Agents | https://github.com/NirDiamant/GenAI_Agents | Agent patterns & tutorials |
-| microsoft/ai-agents-for-beginners | https://github.com/microsoft/ai-agents-for-beginners | Structured lessons |
-| ashishpatel26/500-AI-Agents-Projects | https://github.com/ashishpatel26/500-AI-Agents-Projects | Project ideas |
-| langchain-ai/agents-from-scratch | https://github.com/langchain-ai/agents-from-scratch | Build agents step by step |
+### Documentation
 
-### Free API Keys (for projects)
-| Provider | Free Tier | Link |
-|---|---|---|
-| Google Gemini | 60 req/min, very generous | https://aistudio.google.com/ |
-| Groq | Fast inference, free tier | https://console.groq.com/ |
-| OpenAI | $5 credit for new accounts | https://platform.openai.com/ |
-| Hugging Face | Free inference API | https://huggingface.co/settings/tokens |
-| Cohere | 1000 req/month free | https://dashboard.cohere.com/ |
+| Resource | What You'll Find |
+|:---------|:-----------------|
+| [LangChain Docs & Tutorials](https://python.langchain.com/docs/tutorials/) | Chains, agents, RAG patterns |
+| [LangGraph Tutorials](https://langchain-ai.github.io/langgraph/tutorials/) | Graph-based agent workflows |
+| [Hugging Face Docs](https://huggingface.co/docs) | Transformers, datasets, model hub |
+| [OpenAI Cookbook](https://cookbook.openai.com/) | API recipes and best practices |
+| [Anthropic Claude Docs](https://docs.anthropic.com/) | Claude API, prompt engineering |
+| [LlamaIndex Docs](https://docs.llamaindex.ai/) | Data framework for LLM apps |
+
+### GitHub Repos
+
+| Repo | What It's For |
+|:-----|:--------------|
+| [NirDiamant/GenAI_Agents](https://github.com/NirDiamant/GenAI_Agents) | Agent patterns & tutorials |
+| [microsoft/ai-agents-for-beginners](https://github.com/microsoft/ai-agents-for-beginners) | Structured agent lessons |
+| [ashishpatel26/500-AI-Agents-Projects](https://github.com/ashishpatel26/500-AI-Agents-Projects) | Project ideas & inspiration |
+| [langchain-ai/agents-from-scratch](https://github.com/langchain-ai/agents-from-scratch) | Build agents step by step |
+
+### Free API Keys
+
+| Provider | Free Tier | Get Started |
+|:---------|:----------|:------------|
+| Google Gemini | 60 req/min, very generous | [aistudio.google.com](https://aistudio.google.com/) |
+| Groq | Fast inference, generous free tier | [console.groq.com](https://console.groq.com/) |
+| OpenAI | $5 credit for new accounts | [platform.openai.com](https://platform.openai.com/) |
+| Hugging Face | Free inference API | [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) |
+| Cohere | 1,000 req/month free | [dashboard.cohere.com](https://dashboard.cohere.com/) |
 
 ### Free Compute (for fine-tuning)
-| Platform | GPU | Link |
-|---|---|---|
-| Google Colab | T4 (free tier) | https://colab.research.google.com/ |
-| Kaggle Notebooks | T4/P100, 30 hrs/week | https://www.kaggle.com/code |
-| Lightning.ai | Free GPU credits | https://lightning.ai/ |
+
+| Platform | GPU Available | Get Started |
+|:---------|:-------------|:------------|
+| Google Colab | T4 (free tier) | [colab.research.google.com](https://colab.research.google.com/) |
+| Kaggle Notebooks | T4/P100, 30 hrs/week | [kaggle.com/code](https://www.kaggle.com/code) |
+| Lightning.ai | Free GPU credits | [lightning.ai](https://lightning.ai/) |
 
 ---
 
-## Project Summary
+## 🏗 Project Summary
 
-| # | Project | Key Skills | Week |
-|---|---|---|---|
-| 1 | AI Resume Analyzer | LLM APIs, prompt engineering, structured output | 1 |
-| 2 | Semantic Search Engine | Embeddings, vector DB, sentence-transformers | 1 |
-| 3 | Chat With YouTube Channel | RAG, chunking, ChromaDB, Streamlit | 2 |
-| 4 | AI Research Agent | LangGraph, web search, multi-step reasoning | 2 |
-| 5 | Fine-Tuned Domain Model | Hugging Face, LoRA, PEFT, evaluation | 2 |
-| 6 | AI Content Pipeline | Multi-agent, CrewAI, tool use | 3 |
-| 7 | AI Coding Assistant | Agentic RAG, code understanding | 3 |
-| 8 | Deployed RAG Product | FastAPI, Docker, Streamlit, deployment | 3 |
-| 9 | Invoice/Receipt Processor | Multimodal AI, vision, structured extraction | 3 |
+| # | Project | Day | Key Skills | Difficulty |
+|:-:|:--------|:---:|:-----------|:----------:|
+| 1 | **AI Resume Analyzer** | 5 | LLM APIs, prompt engineering, structured output | ⭐⭐ |
+| 2 | **Semantic Search Engine** | 6 | Embeddings, vector DB, sentence-transformers | ⭐⭐ |
+| 3 | **Chat With YouTube Channel** | 9-10 | RAG, chunking, ChromaDB, Streamlit | ⭐⭐⭐ |
+| 4 | **AI Research Agent** | 12 | LangGraph, web search, multi-step reasoning | ⭐⭐⭐ |
+| 5 | **Fine-Tuned Domain Model** | 13 | Hugging Face, LoRA, PEFT, evaluation | ⭐⭐⭐ |
+| 6 | **AI Content Pipeline** | 15 | Multi-agent, CrewAI, tool use | ⭐⭐⭐⭐ |
+| 7 | **AI Coding Assistant** | 16 | Agentic RAG, code understanding | ⭐⭐⭐⭐ |
+| 8 | **Deployed RAG Product** | 17 | FastAPI, Docker, Streamlit, deployment | ⭐⭐⭐⭐ |
+| 9 | **Invoice/Receipt Processor** | 19 | Multimodal AI, vision, structured extraction | ⭐⭐⭐⭐ |
 
 ---
 
-> **Remember:** The goal is not to finish everything perfectly. It's to build muscle memory
-> for the GenAI stack. A working ugly project teaches more than a polished tutorial you followed.
+## Setup
+
+### Environment
+
+```bash
+# Install Miniconda (if not installed)
+# https://docs.conda.io/en/latest/miniconda.html
+
+# Create and activate environment
+conda create -n genai python=3.11 -y
+conda activate genai
+
+# Install core packages
+conda install pytorch matplotlib numpy scikit-learn -y
+pip install transformers datasets langchain chromadb sentence-transformers
+```
+
+### Repository Structure
+
+```
+gen_ai_engineer/
+├── README.md                          # This file
+├── week1/
+│   ├── day01_neural_networks_backpropagation/
+│   │   ├── README.md                  # Full book: Neural Networks & Backprop
+│   │   ├── micrograd.py               # Autograd engine + MLP
+│   │   ├── exercises.py               # Hands-on exercises
+│   │   └── visualizations.py          # 8 concept diagrams
+│   ├── day02_language_modeling_nlp/
+│   │   ├── README.md                  # Full book: Language Modeling
+│   │   ├── bigram.py                  # Counting-based bigram model
+│   │   ├── bigram_neural.py           # Neural network bigram
+│   │   └── mlp_lm.py                 # MLP language model
+│   ├── day03_transformers/
+│   │   ├── README.md                  # Full book: Transformers
+│   │   └── visualizations.py          # 8 transformer diagrams
+│   ├── day04_tokenization_huggingface/
+│   ├── day05_prompt_engineering_llm_apis/
+│   ├── day06_embeddings_vector_databases/
+│   └── day07_review_consolidation/
+├── week2/
+│   ├── day08_langchain_fundamentals/
+│   ├── day09_rag_basics/
+│   ├── day10_rag_advanced_youtube_project/
+│   ├── day11_ai_agents_react_pattern/
+│   ├── day12_langgraph_multi_step_agents/
+│   ├── day13_fine_tuning_llms/
+│   └── day14_review_refine_integrate/
+└── week3/
+    ├── day15_multi_agent_systems/
+    ├── day16_agentic_rag/
+    ├── day17_deployment_apis/
+    ├── day18_evaluation_observability/
+    ├── day19_multimodal_ai_vision/
+    ├── day20_ethics_safety/
+    └── day21_portfolio_polish/
+```
+
+---
+
+<div align="center">
+
+> **The goal is not to finish everything perfectly. It's to build muscle memory for the GenAI stack.**
+> A working ugly project teaches more than a polished tutorial you followed.
 > When stuck, read the error, check the docs, ask an LLM - that IS the job of a GenAI engineer.
+
+</div>
