@@ -34,7 +34,7 @@
 | 1 | [Day 1](week1/day01_neural_networks_backpropagation/) | Neural Networks & Backpropagation | ✅ |
 | 1 | [Day 2](week1/day02_language_modeling_nlp/) | Language Modeling & NLP Basics | ✅ |
 | 1 | [Day 3](week1/day03_transformers/) | Transformers - The Core of All GenAI | ✅ |
-| 1 | [Day 4](week1/day04_tokenization_huggingface/) | Tokenization & Hugging Face Basics | ⬜ |
+| 1 | [Day 4](week1/day04_tokenization_huggingface/) | Tokenization & Hugging Face Basics | ✅ |
 | 1 | [Day 5](week1/day05_prompt_engineering_llm_apis/) | Prompt Engineering & LLM APIs | ⬜ |
 | 1 | [Day 6](week1/day06_embeddings_vector_databases/) | Embeddings & Vector Databases | ⬜ |
 | 1 | [Day 7](week1/day07_review_consolidation/) | Review & Consolidation | ⬜ |
@@ -173,8 +173,10 @@
 </table>
 
 ```bash
-pip install transformers datasets accelerate
+pip install transformers datasets accelerate tiktoken
 ```
+
+**Code:** [Book](week1/day04_tokenization_huggingface/README.md) | [bpe_tokenizer.py](week1/day04_tokenization_huggingface/bpe_tokenizer.py) | [huggingface_generate.py](week1/day04_tokenization_huggingface/huggingface_generate.py) | [visualizations.py](week1/day04_tokenization_huggingface/visualizations.py)
 
 ---
 
@@ -690,7 +692,13 @@ gen_ai_engineer/
 │   │   ├── mini_gpt.py                          # Decoder-only Transformer LM
 │   │   ├── visualizations.py                    # Generate 8 transformer diagrams
 │   │   └── viz_*.png                            # Pre-generated diagrams
-│   └── day04-07 .../
+│   ├── day04_tokenization_huggingface/
+│   │   ├── README.md                            # Book: Tokenization & HF
+│   │   ├── bpe_tokenizer.py                     # BPE tokenizer from scratch
+│   │   ├── huggingface_generate.py              # GPT-2 loading & generation
+│   │   ├── visualizations.py                    # Generate 8 concept diagrams
+│   │   └── viz_*.png                            # Pre-generated diagrams
+│   └── day05-07 .../
 ├── week2/
 │   └── day08-14 .../
 └── week3/
