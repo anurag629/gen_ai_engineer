@@ -27,6 +27,15 @@
 
 ---
 
+## Join the community
+
+You don't have to do this alone. The [CODERCOPS Discord](https://discord.gg/wkq8h3VWr3) has a place for this roadmap.
+
+- Run `/checkin` once a day and pick **Gen AI Engineer in 3 Weeks**. A bot keeps a log thread with your name on it and tracks your streak.
+- Ask questions in your log thread, and run `/streaks` to see how everyone else is doing.
+
+---
+
 ## Progress Tracker
 
 | Week | Day | Topic | Status |
